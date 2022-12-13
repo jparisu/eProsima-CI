@@ -1,0 +1,9 @@
+name: 'Hello World Action'
+description: 'Echo Hello World. Yes, thats it'
+runs:
+  using: composite
+  steps:
+    - name: printing hello world
+      shell: bash
+      run: |
+        echo "Hello World"
