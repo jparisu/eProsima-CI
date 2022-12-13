@@ -12,3 +12,4 @@ runs:
       shell: bash
       run: |
         echo "Hello World ${{ inputs.custom_message }}"
+        cat ../colcon.meta
