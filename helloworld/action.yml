@@ -5,6 +5,9 @@ inputs:
     description: 'Specify a custom message that you want to print within the action'
     required: false
     default: ''
+  custom_file:
+    description: 'Specify a file to be printed'
+    required: true
 runs:
   using: composite
   steps:
@@ -12,4 +15,4 @@ runs:
       shell: bash
       run: |
         echo "Hello World ${{ inputs.custom_message }}"
-        cat ../colcon.meta
+        cat ${{ inputs.custom_file }}
