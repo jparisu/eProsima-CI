@@ -1,9 +1,14 @@
 name: 'Hello World Action'
 description: 'Echo Hello World. Yes, thats it'
+inputs:
+  custom_message:
+    description: 'Specify a custom message that you want to print within the action'
+    required: false
+    default: ''
 runs:
   using: composite
   steps:
     - name: printing hello world
       shell: bash
       run: |
-        echo "Hello World"
+        echo "Hello World ${{ inputs.custom_message }}"
