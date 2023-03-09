@@ -55,3 +55,8 @@ runs:
         echo "::endgroup::"
 
       shell: bash
+
+# curl version
+# curl \
+  # -l https://raw.githubusercontent.com/${{ inputs.source_repository }}/${{ inputs.source_repository_branch }}/${{ inputs.file_name }} \
+  # -o ${{ inputs.file_result_path }}/${{ inputs.file_result }}
